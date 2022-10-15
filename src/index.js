@@ -35,4 +35,8 @@ client.on('interactionCreate', async interaction => {
 });
 
 //Bot login
-//client.login(token);
+if (token == "put-your-discord-bot-token-here") {
+  console.error("Please change your bot token in config.json!");
+} else {
+  client.login(token);
+}
