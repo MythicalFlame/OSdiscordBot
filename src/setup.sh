@@ -29,10 +29,10 @@ read runUpdateCommands
 if [ "$runUpdateCommands" == "y" ]
 then
   echo "Running update-commands.js..."
+  node ./update-commands.js
 elif [ "$runUpdateCommands" == "n" ]
 then
   echo "update-commands.js has not been automatically run. You must do so before using the bot."
-  node ./update-commands.js
 else
   echo "Invalid input. Assuming the answer \"n\". update-commands.js has not been automatically run. You must do so before using the bot."
 fi
