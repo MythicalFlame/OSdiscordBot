@@ -108,36 +108,5 @@ module.exports = {
         await interaction.reply('You do not have timeout permissions!');
       }
     }
-    /*const { PermissionsBitField } = require('discord.js');
-    const index = require('../index.js');
-    const user = interaction.options.getUser('target');
-    const member = interaction.guild.members.cache.get(user.id);
-    const client = index.botClient;
-    const reason = interaction.options.getString('reason');
-    const minutes = interaction.options.getInteger('minutes');
-    //code
-    if (interaction.member.permissions.has(PermissionsBitField.Flags.ModerateMembers, true)) {
-      switch (member.id) {
-        case (interaction.member.id):
-          return interaction.reply('You cannot timeout yourself!');
-        case (client.user.id):
-          return interaction.reply('You cannot timeout the bot!');
-        default:
-          if (!member.moderatable) {
-            await interaction.reply('I cannot kick this user!');
-          } else if (member.roles.highest.position >= interaction.member.roles.highest.position) {
-            await interaction.reply('You cannot timeout someone higher than or equal to you in the role hierarchy!')
-          } else {
-            if (reason === null) {
-              reason = "No reason supplied.";
-            }
-            await interaction.reply(`${member} has been timedout from the server for ${minutes}. The reason supplied was: ${reason}`);
-            await member.timeout(minutes * 60 * 1000, `${interaction.user} has stated the reason: ${reason}`);
-          }
-          break;
-      }
-    } else {
-      await interaction.reply('You do not have timeout permissions!');
-    }*/
 	},
 };
